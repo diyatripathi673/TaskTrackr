@@ -17,10 +17,16 @@ connectDB();
 app.get("/", (req, res) => {
   res.send("Welcome to TaskTrackr API");
 });
+
+
+// User and Task Routes
 app.use("/api/users", userRouter); // 👈 this must match
 app.use("/api/tasks", taskRouter);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
+
 // Export the app for testing purposes
 export default app;
